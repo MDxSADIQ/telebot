@@ -1,6 +1,6 @@
 // all imports and libraries.
 const TelegramBot = require("node-telegram-bot-api")
-const token = '6609450929:AAEoRx9UUjm9XA9aqqk40_0iwFqayVDFIkM';
+const token = 'your api token';
 const bot = new TelegramBot(token, { polling: true })
 const {v4}  = require("uuid")
 
