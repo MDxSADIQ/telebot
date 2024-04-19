@@ -4,7 +4,24 @@ const token = '6609450929:AAG_REAAyJ9eC30ufiUgHKBz1rwCrJxQGFA';
 const bot = new TelegramBot(token, { polling: true })
 const {v4}  = require("uuid")
 
-
+  const express = require("express");
+  const PORT = process.env.PORT || 4040;
+  const app = express();
+  
+  app.use(express.json());
+  app.post("*", async (req, res) => {
+      res.send("hello post")
+  });
+  
+  app.get("*", async (req, res) => {
+      res.send("hello get")
+  }); 
+  
+  app.listen(PORT, function (err) {
+      if (err) console.log(err);
+      console.log("Server listening on port", PORT)
+      
+  })
 // my database (tempory)
 
 var ModAppList = [
